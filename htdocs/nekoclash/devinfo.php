@@ -75,6 +75,7 @@ $cpuFamily = preg_match('/^CPU family:\s+(.+)/m', $cpuInfo, $matches);
         }
 
         #player {
+            display:none !important;
             width: 320px;
             height: 320px;
             margin: 50px auto;
@@ -649,15 +650,6 @@ date_default_timezone_set('Asia/Shanghai');
                 })
                 .catch(error => console.error('获取天气数据时出错:', error));
         }
-
-        window.onload = function() {
-            speakMessage('欢迎使用语音播报系统！');
-            checkWebsiteAccess(websites);
-            speakCurrentTime();
-            fetchWeather();
-            speakRandomPoem(); 
-            setInterval(updateTime, 1000);
-        };
     </script>
 </body>
 </html>
